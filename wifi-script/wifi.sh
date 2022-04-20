@@ -8,7 +8,6 @@ func2()
     ifconfig mlan0 down
     ifconfig wfd0 down
     ifconfig wlp1s0 down
-    ifconfig usb0 down
     rmmod moal
     sleep 1
     
