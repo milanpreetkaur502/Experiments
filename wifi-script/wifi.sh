@@ -1,6 +1,6 @@
 #!/bin/bash
 
-modeprobe moal mod_para=nxp/wifi_mod_para.conf
+modprobe moal mod_para=nxp/wifi_mod_para.conf
 sleep 3
 
 func2()
@@ -11,7 +11,7 @@ func2()
     rmmod moal
     sleep 1
     
-    modeprobe moal mod_para=nxp/wifi_mod_para.conf
+    modprobe moal mod_para=nxp/wifi_mod_para.conf
     sleep 3
     func1
 }
@@ -28,7 +28,6 @@ func1()
              func2
          elif [ $item == "uap0" ];then
              systemctl stop wpa_supplicant
-             systemctl start hostapd-example
          fi  
         done       
 }
